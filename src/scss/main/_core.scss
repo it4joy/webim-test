@@ -1,0 +1,42 @@
+.html {
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  color: $body-color;
+}
+
+.html, .body {
+  min-height: 100vh;
+}
+
+.body {
+  background: $body-bg;
+  font-size: $font-size-md;
+}
+
+.app-wrapper {
+  @include display-flex-mixin(flex, column, space-between, stretch);
+  min-height: 100vh;
+}
+
+.main-content {
+  @include flex(1, 0, auto);
+}
+
+// default
+
+.std-content-box {
+  padding: 1.6rem 2.4rem;
+  background: $white;
+  box-shadow: $box-shadow-custom;
+  border-radius: $border-radius-sm;
+}
+
+.std-negative-margin {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.fullheight {
+  height: 100%;
+}

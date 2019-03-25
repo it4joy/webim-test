@@ -1,0 +1,25 @@
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.std-figure {
+  text-align: center;
+}
+
+.std-figcaption {
+  margin-top: 6rem;
+  line-height: 3rem;
+  font-size: $font-size-sm;
+}
+
+// Theme (standalone pictures)
+
+.employment-services-img {
+  width: 50rem;
+  height: 50rem;
+  background: url(../imgs/screen4-image.jpg) no-repeat center;
+  background-size: cover;
+  box-shadow: $box-shadow-custom-md;
+  border-radius: $border-radius-50-percents;
+}

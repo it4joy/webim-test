@@ -1,0 +1,104 @@
+// links
+
+.link {
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    color: $link-hover-color;
+  }
+}
+
+.link-gray {
+  color: rgba(0, 0, 0, 0.37);
+  &:hover {
+    color: $custom-gray-400;
+  }
+}
+
+
+// Headings
+
+.h1 {
+  font-size: $h1-font-size;
+}
+.h2 {
+  font-size: $h2-font-size;
+}
+.h3 {
+  font-size: $h3-font-size;
+}
+.h4 {
+  font-size: $h4-font-size;
+}
+.h5 {
+  font-size: $h5-font-size;
+}
+.h6 {
+  font-size: $h6-font-size;
+}
+
+
+// `p` styles
+
+.p {
+  font-size: $font-size-base;
+}
+
+.p-sm {
+  font-size: $font-size-sm;
+}
+
+
+// Lists
+
+.list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list_horizontal {
+  @include display-flex-mixin(flex, row, space-between, center, wrap);
+}
+
+
+// Text transform classes
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+// Custom headings
+
+.extra-heading {
+  font-family: 'Roboto Bold', Tahoma, sans-serif;
+  font-size: 8.2rem;
+  color: $custom-heading-black;
+}
+
+.custom-h2 {
+  line-height: 3.2rem;
+  font-size: 2.3rem;
+}
+
+.custom-h4 {
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+}
+
+.heading-group {
+  margin-bottom: 4rem;
+}
+
+
+// Icons
+
+
