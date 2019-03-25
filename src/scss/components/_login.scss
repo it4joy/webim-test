@@ -1,0 +1,11 @@
+.login-box {
+  padding: 2rem;
+  width: 30rem;
+  background: $white;
+  box-shadow: $box-shadow-custom;
+  border-radius: $border-radius-md;
+  text-align: center;
+  .btn-login {
+    margin: 2rem 0;
+  }
+}

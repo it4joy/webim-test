@@ -4,7 +4,7 @@
   padding: $btn-padding-y $btn-padding-x;
   background-color: $custom-mid-gray;
   border: $btn-border-width solid $btn-border-color;
-  border-radius: $custom-border-radius;
+  border-radius: $btn-border-radius;
   text-align: center;
   font-family: $font-family-base-medium;
   font-size: 1.4rem;
@@ -13,7 +13,6 @@
   user-select: none;
   line-height: $btn-line-height;
   font-weight: $btn-font-weight;
-  text-transform: uppercase;
   color: $custom-black;
   &:not(.disabled),
   &:not(:disabled) {

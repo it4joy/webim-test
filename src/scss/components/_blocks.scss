@@ -4,51 +4,6 @@
 
 // Features
 
-.services-features-item {
-  @include display-flex-mixin(flex, row, flex-start, center);
-  margin-bottom: 3rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  .item-icon-block {
-    position: relative;
-    margin-right: 3rem;
-    .number {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-      font-weight: $font-weight-bold;
-      color: $gray-400;
-    }
-    .icon {
-      display: inline-block;
-      margin-left: 2.6rem;
-      width: 8rem;
-      height: 8rem;
-      background-position: center;
-      background-size: auto 5rem;
-      background-repeat: no-repeat;
-      background-color: $custom-light-gray;
-      box-shadow: $box-shadow-custom-md;
-      border-radius: $border-radius-md;
-    }
-    .icon-successful-interview {
-      background-image: url(../imgs/formula-icon.png);
-    }
-    .icon-newsletter {
-      background-image: url(../imgs/rassilka-icon.png);
-    }
-    .icon-personal-performance {
-      background-image: url(../imgs/sobesedovanie-icon.png);
-    }
-    .icon-publication {
-      background-image: url(../imgs/rezume-like-icon.png);
-    }
-  }
-  .link {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.login-box-wrapper {
+  @include display-flex-mixin(flex, row, center, center);
 }

@@ -1,0 +1,10 @@
+.footer {
+  @include flex(0, 0, 7rem);
+  padding: 1.5rem;
+  border-top: 1px solid $gray-300;
+  text-align: center;
+  color: $custom-gray-400;
+  .p {
+    margin-bottom: 0;
+  }
+}
