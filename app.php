@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="html">
   <head>
-    <title>Webim - Тестовое задание</title>
+    <title>Webim - Тестовое задание | Внутренняя страница</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,11 +35,9 @@
                     <li>
                       <a href="#" class="link">smth</a>
                     </li>
-                    <!--
                     <li>
                       <button type="button" class="btn btn-dark btn-logout">Выйти</button>
                     </li>
-                    -->
                   </ul>
                 </nav>
               </div>
@@ -50,12 +48,8 @@
 
       <main class="main-content">
         <div class="container">
-          <div class="content-box login-box-wrapper">
-            <div class="login-box">
-              <h3 class="h3">Мы рады вам!</h3>
-              <button class="btn btn-dark btn-login">Авторизоваться</button>
-              <p class="p p-sm p-muted">* Авторизация через Вконтакте</p>
-            </div>
+          <div class="vk-data-wrapper">
+            
           </div>
         </div>
       </main>
