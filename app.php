@@ -48,9 +48,7 @@
 
       <main class="main-content">
         <div class="container">
-          <div class="vk-data-wrapper">
-            
-          </div>
+          <div class="vk-data-wrapper"></div>
         </div>
       </main>
 

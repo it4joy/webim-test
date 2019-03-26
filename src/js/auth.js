@@ -1,41 +1,38 @@
 'use strict';
 
 $('.btn-login').on('click', function() {
-  document.location.assign('https://oauth.vk.com/authorize?client_id=6913753&redirect_uri=https://it4joy.ru/webim/app.php&display=popup&scope=friends&response_type=accessToken&v=5.92&state=webim_test_app-auth');
+  document.location.assign('https://oauth.vk.com/authorize?client_id=6913753&redirect_uri=https://it4joy.ru/webim/app.php&display=popup&scope=friends&response_type=token&v=5.92&state=webim_test_app-auth');
 });
 
 let accessToken, script;
 
+const dataWrapper = $('.vk-data-wrapper');
+
 const getInfo = (accessToken) => {
-  /* $.ajax({
-    url: 'backend/requestHandler.php',
-    data: {
-      fields: 'nickname',
-      order: 'random',
-      accessToken: accessToken,
-      v: '5.92'
+  const urlInfoAboutProfile = "https://api.vk.com/method/users.get?fields=first_name&access_token=" + accessToken + "&v=5.92";
+  $.ajax({
+    url: urlInfoAboutProfile,
+    type: 'GET',
+    dataType: 'jsonp',
+    success: function(result) {
+      $(dataWrapper).append(`<p>Пользователь: ${result.response[0].first_name} ${result.response[0].last_name}</p>`);
+    }
+  });
+
+  const urlInfoAboutFriends = "https://api.vk.com/method/friends.get?fields=nickname&order=random&access_token=" + accessToken + "&v=5.92";
+  $.ajax({
+    url: urlInfoAboutFriends,
+    type: 'GET',
+    dataType: 'jsonp',
+    success: function(result) {
+      $(dataWrapper).append('<p>Имена пяти случайных друзей:</p>');
+      $.each(result.response.items, function(i, val) {
+        if (i <= 4) {
+          $(dataWrapper).append(`<p>${i + 1}. ${val.first_name} ${val.last_name}</p>`);
+        }
+      });
     },
-    success: function() {
-      console.log(data.first_name);
-    }
-  }); */
-  
-  // actual (JSONP)
-
-  script = document.createElement('script');
-  script.src = "https://api.vk.com/method/friends.get?fields=nickname&order=random&access_token=" + accessToken + "&v=5.92&callback=callbackGetInfo";
-  document.getElementsByTagName('head')[0].appendChild(script);
-  function callbackGetInfo(result) {
-    alert(result.response.items[0].first_name);
-  }
-  //
-
-  /* $.get(
-    "https://api.vk.com/method/friends.get?fields=nickname&order=random&access_token=" + accessToken + "&v=5.92",
-    function(data) {
-      console.log(data.first_name);
-    }
-  ); */
+  });
 }
 
 const getAccessToken = () => {
@@ -44,10 +41,9 @@ const getAccessToken = () => {
     const accessTokenStartIndex = url.indexOf('token=');
     const accessTokenEndIndex = url.indexOf('&expires');
     accessToken = url.substring(accessTokenStartIndex + 6, accessTokenEndIndex);
-    console.log(`Token is: ${accessToken}`); // test
+    //console.log(`Token is: ${accessToken}`); // test
     getInfo(accessToken);
   }
 };
 
-//document.addEventListener('DOMContentLoaded', getAccessToken);
-window.onload = getAccessToken();
+document.addEventListener('DOMContentLoaded', getAccessToken);
