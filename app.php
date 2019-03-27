@@ -23,17 +23,17 @@
             <div class="row">
               <div class="col-md-5">
                 <div class="top-logo-block">
-                  <a href="/" class="logo">Webim</a>
+                  <a href="/webim" class="logo">Webim</a>
                 </div>
               </div>
               <div class="col-md-7">
                 <nav class="top-menu uppercase">
                   <ul class="list list_horizontal">
                     <li>
-                      <a href="#" class="link">smth</a>
+                      <a href="#" class="link">item-1</a>
                     </li>
                     <li>
-                      <a href="#" class="link">smth</a>
+                      <a href="#" class="link">item-2</a>
                     </li>
                     <li>
                       <button type="button" class="btn btn-dark btn-logout">Выйти</button>

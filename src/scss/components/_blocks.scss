@@ -7,3 +7,7 @@
 .login-box-wrapper {
   @include display-flex-mixin(flex, row, center, center);
 }
+
+.vk-data-wrapper {
+  padding: 2rem 0;
+}
