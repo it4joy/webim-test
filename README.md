@@ -4,6 +4,7 @@ Test task for Webim
 
 ### Project Features  
 * vk.com OAuth
+* using VK API Methods
 * No Bootstrap
 * Webpack v.4
 * SCSS and components
